@@ -41,6 +41,10 @@ feature.
 
 => Transparent pricing and licensing
 
+Weather apps have become an essential part of our daily lives, offering real-time updates on weather conditions that help us plan our activities and stay prepared for the day ahead. 
+
+Weather impacts our decisions, from choosing the right outfit for the day to planning outdoor events. Learning how to build a weather app not only provides you with valuable coding skills but also empowers you to craft a tool that adds practical value to users' lives. Even if you're new to web development, fear not – we'll break down each stage into easily digestible segments, ensuring that you grasp every concept along the way.
+
 What Is a Weather API?
 
 A Weather API (Application Programming Interface) is a web service that provide weather data to developers and businesses. These APIs provide their users with data from official weather sources. Moreover, weather APIs usually provide data to their users with API keys.
@@ -80,6 +84,10 @@ The Weather Forecast App relies on the following dependencies:
 d. Technologies Used
 
 The Weather Forecast App is built using the following technologies:
+
+To build this app, I used the classic trio of web development - HTML, CSS, and JavaScript. 
+
+The front-end was crafted using HTML for the structure, CSS for the styling, and JavaScript to handle the interactivity and data retrieval.
 
 => HTML5: Used for creating the structure of the web page.
 
