@@ -28,7 +28,18 @@ a. Introduction
 
 => The Weather Forecast App is a web application designed to provide users with accurate and up-to-date weather information for any city around the world. 
 
-It offers a user-friendly interface for users to input a city name or retrieve weather data based on their current location using the browser's geolocation feature.
+=> It offers a user-friendly interface for users to input a city name or retrieve weather data based on their current location using the browser's geolocation 
+feature.
+
+=> Weather data in a fast and easy-to-use way : We are providing highly recognisable weather products that make working with the weather data a way easier. We work with millions of developers around a clock and believe that these benefits might be suitable for most of applications, up to the complex enterprise systems.
+
+=> A spectrum of ready-to-use weather products
+
+=> Short-term and long-term forecasts, history and observation
+
+=> Any location on the globe
+
+=> Transparent pricing and licensing
 
 b. Features
 
