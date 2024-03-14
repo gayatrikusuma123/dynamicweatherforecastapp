@@ -24,7 +24,7 @@ Table of Contents
 
 10. Conclusion
 
-a. Introduction
+# Introduction
 
 => The Weather Forecast App is a web application designed to provide users with accurate and up-to-date weather information for any city around the world. 
 
@@ -45,7 +45,7 @@ Weather apps have become an essential part of our daily lives, offering real-tim
 
 Weather impacts our decisions, from choosing the right outfit for the day to planning outdoor events. Learning how to build a weather app not only provides you with valuable coding skills but also empowers you to craft a tool that adds practical value to users' lives. Even if you're new to web development, fear not – we'll break down each stage into easily digestible segments, ensuring that you grasp every concept along the way.
 
-What Is a Weather API?
+=> What Is a Weather API?
 
 A Weather API (Application Programming Interface) is a web service that provide weather data to developers and businesses. These APIs provide their users with data from official weather sources. Moreover, weather APIs usually provide data to their users with API keys.
 
@@ -61,7 +61,7 @@ There are some features that a good weather API should have. Some of those:
 
 => Stability and Reliability: It is very important for a weather API to have high uptime and the accuracy of the data it provides.
 
-b. Features
+# Features
 
 => Input Section: Users can input a city name manually or use the "Get Device Location" button to fetch weather data based on their current geographical location.
 
@@ -73,7 +73,7 @@ b. Features
 
 => Responsive Design: The application is responsive and adapts well to different screen sizes and devices.
 
-c. Dependencies
+# Dependencies
 
 The Weather Forecast App relies on the following dependencies:
 
@@ -81,7 +81,7 @@ The Weather Forecast App relies on the following dependencies:
 
 => Google Fonts API: Imported Google Fonts for styling text content within the application.
 
-d. Technologies Used
+# Technologies Used
 
 The Weather Forecast App is built using the following technologies:
 
@@ -89,13 +89,61 @@ To build this app, I used the classic trio of web development - HTML, CSS, and J
 
 The front-end was crafted using HTML for the structure, CSS for the styling, and JavaScript to handle the interactivity and data retrieval.
 
-=> HTML5: Used for creating the structure of the web page.
+# HTML5: Used for creating the structure of the web page.
 
-=> CSS3: Styled the user interface and applied responsive design principles.
+This documentation provides a clear explanation of the structure and functionality of the Weather Forecast App HTML code.
+
+=> Structure Overview
+
+The HTML code consists of the following main sections:
+
+~ Wrapper: This is the main container for the entire Weather Forecast App.
+
+~ Header Section: Displays the title of the application, which is "Weather Forecast App". It also includes a left arrow icon for navigation purposes.
+
+~ Input Section: Allows users to input a city name or retrieve the device's location for weather information.
+
+~ Weather Information Section: Displays weather information such as weather icon, temperature, weather description, location, and additional weather details.
+
+=> Detailed Description
+
+~ Header Section: The header section contains the title of the application, "Weather Forecast App", followed by a left arrow icon, which is implemented using the <i> element with the class bx-left-arrow-alt.
+
+~ Input Section: The input section consists of an input field for entering a city name and a button to get the device's location.
+
+The input field has the following attributes:
+
+~ type="text": Specifies that the input should accept text input.
+
+~ spellcheck="false": Disables spell checking for the input field.
+
+~ placeholder="Enter city name": Displays a placeholder text inside the input field.
+
+~ required: Specifies that the input field is required before submitting the form.
+
+~ The button to get the device's location does not have any specific attributes or classes.
+
+=> Weather Information Section
+
+The weather information section displays various weather-related details, including weather icon, temperature, weather description, location, and additional weather details.
+
+~ Weather Icon: An <img> element is used to display the weather icon. The src attribute is empty, indicating that it will be populated dynamically with the appropriate weather icon.
+
+~ Temperature: Temperature is displayed using a <span> element with the class temp. The temperature value is represented by a <span> element with the class numb, followed by a degree symbol (°), and the unit Celsius (C).
+
+~ Location Display: The location display includes an icon (represented by the <i> element with the class bx-map) and the location coordinates represented by a <span> element.
+
+~ Additional Weather Details: This section includes two columns for displaying additional weather details such as "Feels like" temperature and humidity.
+
+~ Feels Like Temperature: Displays the "feels like" temperature using the <div> element with the class feels. It includes a thermometer icon (represented by the <i> element with the class bxs-thermometer) and the temperature value.
+
+~ Humidity: Displays the humidity using the <div> element with the class humidity. It includes a droplet icon (represented by the <i> element with the class bxs-droplet-half) and the humidity value.
+
+# CSS3: Styled the user interface and applied responsive design principles.
 
 => JavaScript (ES6+): Implemented interactivity and dynamic content updates, including fetching data from the API and handling user input.
 
-e. External Libraries
+# External Libraries
 
 The Weather Forecast App uses the following external libraries:
 
