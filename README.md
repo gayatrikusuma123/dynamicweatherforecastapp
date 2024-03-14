@@ -41,6 +41,22 @@ feature.
 
 => Transparent pricing and licensing
 
+What Is a Weather API?
+
+A Weather API (Application Programming Interface) is a web service that provide weather data to developers and businesses. These APIs provide their users with data from official weather sources. Moreover, weather APIs usually provide data to their users with API keys.
+
+There are some features that a good weather API should have. Some of those:
+
+=> Rich Weather Data: A good weather API should provide its users with basic weather information (temperature, humidity, wind speed, precipitation, sunny/cloudy, etc.).
+
+=> Up-to-date Weather Data: This API should provide the most up-to-date weather data possible.
+
+=> Forecasts and Future Data: Another feature that makes a weather API popular is that it provides forecast data. These forecasts can help users plan or make decisions based on the weather.
+
+=> Wide Location Support: A good weather API should provide rich location support to its users. Many users in the global age should also be able to use this API.
+
+=> Stability and Reliability: It is very important for a weather API to have high uptime and the accuracy of the data it provides.
+
 b. Features
 
 => Input Section: Users can input a city name manually or use the "Get Device Location" button to fetch weather data based on their current geographical location.
