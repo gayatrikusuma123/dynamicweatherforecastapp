@@ -1,103 +1,117 @@
 const wrapper = document.querySelector(".wrapper"),
-  inputPart = document.querySelector(".input-part"),
-  infoTxt = inputPart.querySelector(".info-txt"),
-  inputField = inputPart.querySelector("input"),
-  locationBtn = inputPart.querySelector("button"),
-  weatherPart = wrapper.querySelector(".weather-part"),
-  wIcon = weatherPart.querySelector("img"),
-  arrowBack = wrapper.querySelector("header i");
+    inputPart = document.querySelector(".input-part"),
+    infoTxt = inputPart.querySelector(".info-txt"),
+    inputField = inputPart.querySelector("input"),
+    locationBtn = inputPart.querySelector("button"),
+    weatherPart = wrapper.querySelector(".weather-part"),
+    wIcon = weatherPart.querySelector("img"),
+    arrowBack = wrapper.querySelector("header i");
 
-const apiKey = "YOUR_API"; // Replace with your actual API key
+const apiKey = "5d96b89780bc69fa00fa53863a748cb6";
 let api;
 
 inputField.addEventListener("keyup", (e) => {
-  if (e.key == "Enter" && inputField.value != "") {
-    requestApi(inputField.value);
-  }
+    if (e.key === "Enter" && inputField.value !== "") {
+        requestApi(inputField.value);
+    }
 });
 
 locationBtn.addEventListener("click", () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
-  } else {
-    alert("Your browser not support geolocation api");
-  }
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    } else {
+        alert("Your browser not support geolocation api");
+    }
 });
 
 function requestApi(city) {
-  api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-  fetchData();
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    fetchData();
 }
 
 function onSuccess(position) {
-  const { latitude, longitude } = position.coords;
-  api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
-  fetchData();
+    const {
+        latitude,
+        longitude
+    } = position.coords;
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+    fetchData();
 }
 
 function onError(error) {
-  infoTxt.innerText = error.message;
-  infoTxt.classList.add("error");
+    infoTxt.innerText = error.message;
+    infoTxt.classList.add("error");
 }
 
 function fetchData() {
-  infoTxt.innerText = "Getting weather details...";
-  infoTxt.classList.add("pending");
-  fetch(api)
-    .then((res) => res.json())
-    .then((result) => weatherDetails(result))
-    .catch(() => {
-      infoTxt.innerText = "Something went wrong, API Error";
-      infoTxt.classList.replace("pending", "error");
-    });
+    infoTxt.innerText = "Getting weather details...";
+    infoTxt.classList.add("pending");
+    fetch(api)
+        .then((res) => res.json())
+        .then((result) => weatherDetails(result))
+        .catch(() => {
+            infoTxt.innerText = "Something went wrong, API Error";
+            infoTxt.classList.replace("pending", "error");
+        });
 }
 
 function weatherDetails(info) {
-  if (info.cod == "404") {
-    infoTxt.classList.replace("pending", "error");
-    infoTxt.innerText = `${inputField.value} isn't a valid city name`;
-  } else {
-    const city = info.name;
-    const country = info.sys.country;
-    const { description, id } = info.weather[0];
-    const { temp, feels_like, humidity } = info.main;
+    if (info.cod === "404") {
+        infoTxt.classList.replace("pending", "error");
+        infoTxt.innerText = `${inputField.value} isn't a valid city name`;
+    } else {
+        const city = info.name;
+        const country = info.sys.country;
+        const {
+            description,
+            id
+        } = info.weather[0];
+        const {
+            temp,
+            feels_like,
+            humidity
+        } = info.main;
 
-    if (id == 800) {
-      wIcon.src =
-        "https://drive.google.com/uc?export=view&id=13TlzPFrICsSEB3llo6PWuywWpoL6ywxb";
-    } else if (id >= 200 && id <= 232) {
-      wIcon.src =
-        "https://drive.google.com/uc?export=view&id=13eqt-OgtVphxXYpIHd9Q7QOBNocK0Onq";
-    } else if (id >= 600 && id <= 622) {
-      wIcon.src =
-        "https://drive.google.com/uc?export=view&id=13Z9FbAC1FJ-ptr55vUWUufLBCrhgjbF1";
-    } else if (id >= 701 && id <= 781) {
-      wIcon.src =
-        "https://drive.google.com/uc?export=view&id=13YVPMlryJ3168jk-VR_zfTvVBL6Xeaqs";
-    } else if (id >= 801 && id <= 804) {
-      wIcon.src =
-        "https://drive.google.com/uc?export=view&id=13TVP9iuZz8A9cf3OtJCgTmeS9AtJ-B3R";
-    } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
-      wIcon.src =
-        "https://drive.google.com/uc?export=view&id=13YoLrgIqfw6UHTu0x4yqTRLIyCbT1O6e";
+
+        if (id === 800) {
+            wIcon.src =
+                "https://www.freepik.com/icon/sun_9055356#fromView=search&page=1&position=19&uuid=d14ee7d9-559b-42cd-ad4d-478ceac00ba7";
+        } else if (id >= 200 && id <= 232) {
+            wIcon.src =
+                "https://www.freepik.com/icon/cloud_13181358#fromView=search&page=1&position=83&uuid=c9f250e1-a2fb-45cb-8da0-6d9dbf279d48";
+        } else if (id >= 600 && id <= 622) {
+            wIcon.src =
+                "https://www.freepik.com/icon/cloud_13480158#fromView=search&page=1&position=55&uuid=ff89289e-4816-468d-9560-48dc991a52e1";
+        } else if (id >= 701 && id <= 781) {
+            wIcon.src =
+                "https://www.freepik.com/icon/cloud_11035217#fromView=search&page=1&position=16&uuid=78417adb-d39b-4596-b92b-ddb7c6a0bf13";
+        } else if (id >= 801 && id <= 804) {
+            wIcon.src =
+                "https://www.freepik.com/icon/cloud-sun_10497829#fromView=search&page=1&position=27&uuid=9c7c7800-124a-4dc2-87b1-b6bdb1214b91";
+        } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
+            wIcon.src =
+                "https://drive.google.com/uc?export=view&id=13YoLrgIqfw6UHTu0x4yqTRLIyCbT1O6e";
+        }
+
+
+
+
+        weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
+        weatherPart.querySelector(".weather").innerText = description;
+        weatherPart.querySelector(
+            ".location span"
+        ).innerText = `${city}, ${country}`;
+        weatherPart.querySelector(".temp .numb-2").innerText = Math.floor(
+            feels_like
+        );
+        weatherPart.querySelector(".humidity span").innerText = `${humidity}%`;
+        infoTxt.classList.remove("pending", "error");
+        infoTxt.innerText = "";
+        inputField.value = "";
+        wrapper.classList.add("active");
     }
-
-    weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
-    weatherPart.querySelector(".weather").innerText = description;
-    weatherPart.querySelector(
-      ".location span"
-    ).innerText = `${city}, ${country}`;
-    weatherPart.querySelector(".temp .numb-2").innerText = Math.floor(
-      feels_like
-    );
-    weatherPart.querySelector(".humidity span").innerText = `${humidity}%`;
-    infoTxt.classList.remove("pending", "error");
-    infoTxt.innerText = "";
-    inputField.value = "";
-    wrapper.classList.add("active");
-  }
 }
 
 arrowBack.addEventListener("click", () => {
-  wrapper.classList.remove("active");
+    wrapper.classList.remove("active");
 });
