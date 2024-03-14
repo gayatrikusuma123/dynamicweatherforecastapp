@@ -191,13 +191,43 @@ The `.humidity i` styles the humidity icon, setting its font size.
 
 # JavaScript (ES6+): Implemented interactivity and dynamic content updates, including fetching data from the API and handling user input.
 
+This documentation provides a clear explanation of the JavaScript code used in the Weather Forecast App.
+
+DOM Element Selection
+
+The JavaScript code starts by selecting necessary elements from the DOM using document.querySelector() and querySelectorAll() methods. These elements include the wrapper, input section, informational text, input field, location button, weather section, weather icon, and arrow back button.
+
+API Key
+
+An API key (apiKey) is defined for accessing weather data. This key is used to authenticate requests to the OpenWeatherMap API.
+
+Event Listeners
+
+The code sets up event listeners for keyup events in the input field and click events on the location button. These event listeners trigger functions to fetch weather data either by city name or by the device's geolocation.
+
+=> Functions
+
+~ requestApi(city): This function constructs the API URL based on the provided city name and calls the fetchData() function.
+
+~ onSuccess(position): This function is a success callback for the geolocation API. It retrieves the latitude and longitude from the device's position and constructs the API URL accordingly.
+
+~ onError(error): This function is an error callback for the geolocation API. It displays an error message in the informational text element.
+
+~ fetchData(): This function fetches weather data from the OpenWeatherMap API using the constructed API URL. It updates the UI with weather details upon successful retrieval and handles errors gracefully.
+
+~ weatherDetails(info): This function extracts relevant weather information from the API response and updates the UI accordingly. It also dynamically updates the weather icon based on the weather condition ID.
+
+=> Event Listener for Arrow Back Button
+
+An event listener is set up for the arrow back button to hide the weather details section when clicked.
+
 # External Libraries
 
 The Weather Forecast App uses the following external libraries:
 
 => Google Fonts: Imported the "Poppins" font family from Google Fonts for consistent typography across the application.
 
-f. Code Structure
+# Code Structure
 
 The codebase of the Weather Forecast App is organized into three main components:
 
@@ -207,7 +237,7 @@ The codebase of the Weather Forecast App is organized into three main components
 
 => JavaScript Interactivity: Implements dynamic behavior and functionality, including handling user input, fetching data from the API, updating the UI, and error handling.
 
-g. Usage
+# Usage
 
 To use the Weather Forecast App, follow these steps:
 
@@ -221,7 +251,7 @@ To use the Weather Forecast App, follow these steps:
 
 => If an error occurs during the process, an appropriate error message will be displayed to the user.
 
-h. Detailed Functionality
+# Detailed Functionality
 
 => Input Handling
 
@@ -263,7 +293,7 @@ Error messages include notifying the user of invalid city names or API errors.
 
 Error messages are styled differently to distinguish them from regular informational messages.
 
-i. Future Improvements
+# Future Improvements
 
 To enhance the Weather Forecast App, consider implementing the following improvements:
 
@@ -275,7 +305,7 @@ To enhance the Weather Forecast App, consider implementing the following improve
 
 => Geolocation Permission Handling: Provide better handling for geolocation permissions and user consent, especially on mobile devices.
 
-j. Conclusion
+# Conclusion
 
 To sum up, nowadays, there are many platforms where people can get weather data. Among these platforms, weather apps are the fastest and most effective. Today, multiple weather apps serve both on websites and mobile applications. These weather apps usually use weather APIs that provide comprehensive data and provide users with live, historical, and weather forecast data.
 
