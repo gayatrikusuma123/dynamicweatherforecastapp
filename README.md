@@ -141,7 +141,55 @@ The weather information section displays various weather-related details, includ
 
 # CSS3: Styled the user interface and applied responsive design principles.
 
-=> JavaScript (ES6+): Implemented interactivity and dynamic content updates, including fetching data from the API and handling user input.
+This documentation provides a clear explanation of the CSS styles used in the Weather Forecast App.
+
+Font Import
+
+The `@import` rule is used to import the "Poppins" font from Google Fonts. Different weights of the font (400, 500, 600, 700) are imported, and the display=swap parameter ensures that text using this font is rendered as quickly and as accurately as possible.
+
+Reset Styles
+
+The `*` selector is used to reset default styles by setting margins, padding, and box-sizing to `0`, and setting the base font to "Poppins".
+
+Body Styles
+
+The `body` styles are applied to the entire document, setting it to flex display to center its content both vertically and horizontally. It also sets the background to a linear gradient and text color to white.
+
+Text Selection Styles
+
+The `::selection` pseudo-element is used to style the selected text, setting the text color to a dark color and the background to white.
+
+Wrapper Styles
+
+The `.wrapper` class styles the main container of the app, setting its width, background, border-radius, border, and box-shadow.
+
+Header Styles
+
+The `.wrapper header` styles the header section of the app, setting font size, font weight, color, padding, and border bottom. It also aligns the items horizontally.
+
+Icon Styles
+
+The `header i` styles the icon within the header, setting its font size to 0em to hide it by default, cursor to pointer, and margin-right for spacing.
+
+The `.wrapper.active header i` styles the active state of the header icon when the wrapper has an active class. It adjusts the margin and font size to make the icon visible.
+
+Input Section Styles
+
+The `.wrapper .input-part` styles the input section, setting margin and padding.
+
+The `.wrapper.active .input-part` styles the active state of the input section when the wrapper has an active class, hiding the input section.
+
+Informational Text Styles
+
+The `.input-part .info-txt` styles the informational text within the input section, setting font size, text alignment, padding, border-radius, and margin.
+
+The `.input-part .info-txt.error` styles the error state of the informational text, setting its color to indicate an error.
+
+Humidity Icon Styles
+
+The `.humidity i` styles the humidity icon, setting its font size.
+
+# JavaScript (ES6+): Implemented interactivity and dynamic content updates, including fetching data from the API and handling user input.
 
 # External Libraries
 
