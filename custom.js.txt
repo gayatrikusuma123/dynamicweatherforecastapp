@@ -1,3 +1,4 @@
+// Selecting necessary elements from the DOM
 const wrapper = document.querySelector(".wrapper"),
     inputPart = document.querySelector(".input-part"),
     infoTxt = inputPart.querySelector(".info-txt"),
@@ -7,42 +8,46 @@ const wrapper = document.querySelector(".wrapper"),
     wIcon = weatherPart.querySelector("img"),
     arrowBack = wrapper.querySelector("header i");
 
+// API key for accessing weather data
 const apiKey = "5d96b89780bc69fa00fa53863a748cb6";
 let api;
 
+// Event listener for handling keyup events in the input field
 inputField.addEventListener("keyup", (e) => {
     if (e.key === "Enter" && inputField.value !== "") {
         requestApi(inputField.value);
     }
 });
 
+// Event listener for handling click events on the location button
 locationBtn.addEventListener("click", () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     } else {
-        alert("Your browser not support geolocation api");
+        alert("Your browser does not support geolocation API");
     }
 });
 
+// Function to request weather data from the API based on city name
 function requestApi(city) {
     api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     fetchData();
 }
 
+// Success callback for geolocation API
 function onSuccess(position) {
-    const {
-        latitude,
-        longitude
-    } = position.coords;
+    const { latitude, longitude } = position.coords;
     api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
     fetchData();
 }
 
+// Error callback for geolocation API
 function onError(error) {
     infoTxt.innerText = error.message;
     infoTxt.classList.add("error");
 }
 
+// Function to fetch weather data from the API
 function fetchData() {
     infoTxt.innerText = "Getting weather details...";
     infoTxt.classList.add("pending");
@@ -55,6 +60,7 @@ function fetchData() {
         });
 }
 
+// Function to display weather details on the UI
 function weatherDetails(info) {
     if (info.cod === "404") {
         infoTxt.classList.replace("pending", "error");
@@ -62,17 +68,10 @@ function weatherDetails(info) {
     } else {
         const city = info.name;
         const country = info.sys.country;
-        const {
-            description,
-            id
-        } = info.weather[0];
-        const {
-            temp,
-            feels_like,
-            humidity
-        } = info.main;
+        const { description, id } = info.weather[0];
+        const { temp, feels_like, humidity } = info.main;
 
-
+        // Updating weather icon based on weather condition ID
         if (id === 800) {
             wIcon.src =
                 "https://tse3.mm.bing.net/th?id=OIP.HzOIE0Aa1T1YEWaWz-6UiwHaHa&pid=Api&P=0&h=220";
@@ -93,9 +92,7 @@ function weatherDetails(info) {
                 "https://tse2.mm.bing.net/th?id=OIP.-SMhZJjJzaXDf5f8cUT1jQHaHa&pid=Api&P=0&h=220";
         }
 
-
-
-
+        // Updating weather details on the UI
         weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
         weatherPart.querySelector(".weather").innerText = description;
         weatherPart.querySelector(
@@ -111,6 +108,12 @@ function weatherDetails(info) {
         wrapper.classList.add("active");
     }
 }
+
+// Event listener for the arrow back button to hide the weather details section
+arrowBack.addEventListener("click", () => {
+    wrapper.classList.remove("active");
+});
+
 
 arrowBack.addEventListener("click", () => {
     wrapper.classList.remove("active");
