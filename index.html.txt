@@ -1,25 +1,40 @@
 <div class="wrapper">
+    <!-- Header section -->
     <header><i class='bx bx-left-arrow-alt'></i>Weather Forecast App</header>
+
+    <!-- Input section -->
     <section class="input-part">
+        <!-- Paragraph element for displaying informational text -->
         <p class="info-txt"></p>
         <div class="content">
+            <!-- Input field for entering city name -->
             <input type="text" spellcheck="false" placeholder="Enter city name" required>
+            <!-- Separator -->
             <div class="separator"></div>
+            <!-- Button to get the device's location -->
             <button>Get Device Location</button>
         </div>
     </section>
+
+    <!-- Weather information section -->
     <section class="weather-part">
+        <!-- Weather icon -->
         <img src="" alt="Weather Icon">
+        <!-- Temperature display -->
         <div class="temp">
             <span class="numb">_</span>
             <span class="deg">°</span>C
         </div>
+        <!-- Weather description -->
         <div class="weather">_ _</div>
+        <!-- Location display -->
         <div class="location">
             <i class='bx bx-map'></i>
             <span>_, _</span>
         </div>
+        <!-- Additional weather details -->
         <div class="bottom-details">
+            <!-- Feels like temperature -->
             <div class="column feels">
                 <i class='bx bxs-thermometer'></i>
                 <div class="details">
@@ -30,6 +45,7 @@
                     <p>Feels like</p>
                 </div>
             </div>
+            <!-- Humidity -->
             <div class="column humidity">
                 <i class='bx bxs-droplet-half'></i>
                 <div class="details">
@@ -40,3 +56,4 @@
         </div>
     </section>
 </div>
+
