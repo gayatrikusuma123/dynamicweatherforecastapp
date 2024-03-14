@@ -75,22 +75,22 @@ function weatherDetails(info) {
 
         if (id === 800) {
             wIcon.src =
-                "https://www.freepik.com/icon/sun_9055356#fromView=search&page=1&position=19&uuid=d14ee7d9-559b-42cd-ad4d-478ceac00ba7";
+                "https://tse3.mm.bing.net/th?id=OIP.HzOIE0Aa1T1YEWaWz-6UiwHaHa&pid=Api&P=0&h=220";
         } else if (id >= 200 && id <= 232) {
             wIcon.src =
-                "https://www.freepik.com/icon/cloud_13181358#fromView=search&page=1&position=83&uuid=c9f250e1-a2fb-45cb-8da0-6d9dbf279d48";
+                "https://www.pngitem.com/pimgs/m/495-4954337_thunderstorm-weather-forecasting-lightning-thunder-and-lighting-symbol.png";
         } else if (id >= 600 && id <= 622) {
             wIcon.src =
-                "https://www.freepik.com/icon/cloud_13480158#fromView=search&page=1&position=55&uuid=ff89289e-4816-468d-9560-48dc991a52e1";
+                "https://cdn2.iconfinder.com/data/icons/weather-24/256/Hailstorm-512.png";
         } else if (id >= 701 && id <= 781) {
             wIcon.src =
-                "https://www.freepik.com/icon/cloud_11035217#fromView=search&page=1&position=16&uuid=78417adb-d39b-4596-b92b-ddb7c6a0bf13";
+                "https://cdn2.iconfinder.com/data/icons/weather-120/130/_Windy_Rain_Clouds-512.png";
         } else if (id >= 801 && id <= 804) {
             wIcon.src =
-                "https://www.freepik.com/icon/cloud-sun_10497829#fromView=search&page=1&position=27&uuid=9c7c7800-124a-4dc2-87b1-b6bdb1214b91";
+                "https://static.vecteezy.com/system/resources/previews/010/434/057/original/partly-cloudy-color-icon-cloudy-weather-sun-with-clouds-weather-forecast-isolated-illustration-vector.jpg";
         } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
             wIcon.src =
-                "https://drive.google.com/uc?export=view&id=13YoLrgIqfw6UHTu0x4yqTRLIyCbT1O6e";
+                "https://tse2.mm.bing.net/th?id=OIP.-SMhZJjJzaXDf5f8cUT1jQHaHa&pid=Api&P=0&h=220";
         }
 
 
