@@ -107,7 +107,7 @@ The HTML code consists of the following main sections:
 
 => Detailed Description
 
-~ Header Section: The header section contains the title of the application, "Weather Forecast App", followed by a left arrow icon, which is implemented using the <i> element with the class bx-left-arrow-alt.
+~ Header Section: The header section contains the title of the application, "Weather Forecast App", followed by a left arrow icon, which is implemented using the `<i>` element with the class bx-left-arrow-alt.
 
 ~ Input Section: The input section consists of an input field for entering a city name and a button to get the device's location.
 
@@ -127,65 +127,65 @@ The input field has the following attributes:
 
 The weather information section displays various weather-related details, including weather icon, temperature, weather description, location, and additional weather details.
 
-~ Weather Icon: An <img> element is used to display the weather icon. The src attribute is empty, indicating that it will be populated dynamically with the appropriate weather icon.
+~ Weather Icon: An `<img>` element is used to display the weather icon. The src attribute is empty, indicating that it will be populated dynamically with the appropriate weather icon.
 
-~ Temperature: Temperature is displayed using a <span> element with the class temp. The temperature value is represented by a <span> element with the class numb, followed by a degree symbol (°), and the unit Celsius (C).
+~ Temperature: Temperature is displayed using a `<span>` element with the class temp. The temperature value is represented by a `<span>` element with the class numb, followed by a degree symbol (°), and the unit Celsius (C).
 
-~ Location Display: The location display includes an icon (represented by the <i> element with the class bx-map) and the location coordinates represented by a <span> element.
+~ Location Display: The location display includes an icon (represented by the `<i>` element with the class bx-map) and the location coordinates represented by a `<span>` element.
 
 ~ Additional Weather Details: This section includes two columns for displaying additional weather details such as "Feels like" temperature and humidity.
 
-~ Feels Like Temperature: Displays the "feels like" temperature using the <div> element with the class feels. It includes a thermometer icon (represented by the <i> element with the class bxs-thermometer) and the temperature value.
+~ Feels Like Temperature: Displays the "feels like" temperature using the `<div>` element with the class feels. It includes a thermometer icon (represented by the `<i>` element with the class bxs-thermometer) and the temperature value.
 
-~ Humidity: Displays the humidity using the <div> element with the class humidity. It includes a droplet icon (represented by the <i> element with the class bxs-droplet-half) and the humidity value.
+~ Humidity: Displays the humidity using the `<div>` element with the class humidity. It includes a droplet icon (represented by the `<i>` element with the class bxs-droplet-half) and the humidity value.
 
 # CSS3: Styled the user interface and applied responsive design principles.
 
 This documentation provides a clear explanation of the CSS styles used in the Weather Forecast App.
 
-Font Import
+~ Font Import
 
 The `@import` rule is used to import the "Poppins" font from Google Fonts. Different weights of the font (400, 500, 600, 700) are imported, and the display=swap parameter ensures that text using this font is rendered as quickly and as accurately as possible.
 
-Reset Styles
+~ Reset Styles
 
 The `*` selector is used to reset default styles by setting margins, padding, and box-sizing to `0`, and setting the base font to "Poppins".
 
-Body Styles
+~ Body Styles
 
 The `body` styles are applied to the entire document, setting it to flex display to center its content both vertically and horizontally. It also sets the background to a linear gradient and text color to white.
 
-Text Selection Styles
+~ Text Selection Styles
 
 The `::selection` pseudo-element is used to style the selected text, setting the text color to a dark color and the background to white.
 
-Wrapper Styles
+~ Wrapper Styles
 
 The `.wrapper` class styles the main container of the app, setting its width, background, border-radius, border, and box-shadow.
 
-Header Styles
+~ Header Styles
 
 The `.wrapper header` styles the header section of the app, setting font size, font weight, color, padding, and border bottom. It also aligns the items horizontally.
 
-Icon Styles
+~ Icon Styles
 
 The `header i` styles the icon within the header, setting its font size to 0em to hide it by default, cursor to pointer, and margin-right for spacing.
 
 The `.wrapper.active header i` styles the active state of the header icon when the wrapper has an active class. It adjusts the margin and font size to make the icon visible.
 
-Input Section Styles
+~ Input Section Styles
 
 The `.wrapper .input-part` styles the input section, setting margin and padding.
 
 The `.wrapper.active .input-part` styles the active state of the input section when the wrapper has an active class, hiding the input section.
 
-Informational Text Styles
+~ Informational Text Styles
 
 The `.input-part .info-txt` styles the informational text within the input section, setting font size, text alignment, padding, border-radius, and margin.
 
 The `.input-part .info-txt.error` styles the error state of the informational text, setting its color to indicate an error.
 
-Humidity Icon Styles
+~ Humidity Icon Styles
 
 The `.humidity i` styles the humidity icon, setting its font size.
 
@@ -231,7 +231,7 @@ The Weather Forecast App uses the following external libraries:
 
 The codebase of the Weather Forecast App is organized into three main components:
 
-=> HTML Structure: Defines the layout and structure of the web page using HTML5 elements such as <header>, <section>, and <div>.
+=> HTML Structure: Defines the layout and structure of the web page using HTML5 elements such as `<header>`, `<section>`, and `<div>`.
 
 => CSS Styling: Styles the various elements of the application, including fonts, colors, borders, and layout, to create an appealing user interface.
 
